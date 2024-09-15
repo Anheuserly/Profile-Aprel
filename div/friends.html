@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprel's Friends</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Add some advanced styling to make the friends list look more modern and responsive */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    #friends-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    #friends-list li {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #friends-list li h3 {
+      margin-top: 0;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    #friends-list li p {
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    #friends-list li span {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* Add some hover effects to make the friends list more interactive */
+    #friends-list li:hover {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      transform: translateY(-5px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Add some media queries to make the friends list responsive */
+    @media (max-width: 768px) {
+      #friends-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      #friends-list {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2>Friends</h2>
+  <ul id="friends-list">
+    <!-- Friend template -->
+    <template id="friend-template">
+      <li>
+        <h3></h3>
+        <p>Name: <span class="name"></span></p>
+        <p>Account ID: <span class="account-id"></span></p>
+        <p>Discord Username: <span class="discord-username"></span></p>
+        <p>Discord User ID: <span class="discord-user-id"></span></p>
+      </li>
+    </template>
+
+    <!-- Friends list will be generated dynamically using JavaScript -->
+  </ul>
+
+  <script>
+    // Sample friends data
+    const friends = [
+      { name: "John Doe", accountId: 123456, discordUsername: "JohnDoe#1234", discordUserId: 1234567890 },
+      { name: "Jane Smith", accountId: 789012, discordUsername: "JaneSmith#5678", discordUserId: 9876543210 },
+      { name: "Bob Johnson", accountId: 345678, discordUsername: "BobJohnson#9012", discordUserId: 1112131415 },
+      // Add more friends here
+    ];
+
+    // Get the friends list element
+    const friendsList = document.getElementById("friends-list");
+
+    // Get the friend template
+    const friendTemplate = document.getElementById("friend-template");
+
+    // Generate the friends list
+    friends.forEach((friend) => {
+      const friendHTML = friendTemplate.content.cloneNode(true);
+      friendHTML.querySelector(".name").textContent = friend.name;
+      friendHTML.querySelector(".account-id").textContent = friend.accountId;
+      friendHTML.querySelector(".discord-username").textContent = friend.discordUsername;
+      friendHTML.querySelector(".discord-user-id").textContent = friend.discordUserId;
+      friendsList.appendChild(friendHTML);
+    });
+  </script>
+</body>
+</html>

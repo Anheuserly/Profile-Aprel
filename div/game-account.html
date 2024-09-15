@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+  <title>Aprel's Game Accounts</title>
+  <style>
+    /* Add some advanced styling to make the game accounts nav look more modern and responsive */
+    #game-accounts-nav {
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #game-accounts-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #game-accounts-list li {
+      margin-bottom: 10px;
+    }
+
+    #game-accounts-list a {
+      text-decoration: none;
+      color: #337ab7;
+    }
+
+    #game-accounts-list a:hover {
+      color: #23527c;
+    }
+
+    #game-accounts-list span.account-name {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    #game-accounts-list span.account-id {
+      font-size: 14px;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+    <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#posts">Posts</a></li>
+        <li><a href="./div/friends.html">Friends</a></li>
+        <li><a href="./div/game-account.html">Accounts</a></li>
+        <li><a href="https://twitter.com/aprel" target="_blank">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/aprel/" target="_blank">LinkedIn</a></li>
+      </ul>
+    </nav>
+    <img src="aprel.png" alt="Aprel's Profile Picture" class="profile-picture">
+  </header>
+  <nav id="game-accounts-nav">
+    <h2>Game Accounts</h2>
+    <ul id="game-accounts-list">
+      <!-- Game accounts list will be generated dynamically using JavaScript -->
+    </ul>
+  </nav>
+
+  <script>
+    // Sample game accounts data from SAMP UIF
+    const gameAccounts = [
+      { name: "Aprel", accountId: 123456 },
+      { name: "Aprei", accountId: 789012 },
+      { name: "Girlfunny", accountId: 345678 },
+      { name: "il.AprelHills.li", accountId: 901234 },
+      { name: "AprelG", accountId: 567890 },
+      { name: "Aprelpop", accountId: 456789 },
+      { name: "AprelFunny", accountId: 234567 },
+      { name: "Anheuserly$AprelBank", accountId: 234567 },
+      // Add more game accounts here
+    ];
+
+    // Get the game accounts list element
+    const gameAccountsList = document.getElementById("game-accounts-list");
+
+    // Generate the game accounts list
+    gameAccounts.forEach((gameAccount) => {
+      const listItem = document.createElement("li");
+      const anchor = document.createElement("a");
+      const accountNameSpan = document.createElement("span");
+      const accountInfoSpan = document.createElement("span");
+
+      accountNameSpan.textContent = gameAccount.name;
+      accountInfoSpan.textContent = `(ID: ${gameAccount.accountId})`;
+
+      anchor.appendChild(accountNameSpan);
+      anchor.appendChild(accountInfoSpan);
+      listItem.appendChild(anchor);
+      gameAccountsList.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>

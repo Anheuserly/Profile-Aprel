@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprel's Profile</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="profile-info.css">
+  <link rel="stylesheet" href="skills-visualization.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#posts">Posts</a></li>
+        <li><a href="./div/friends.html">Friends</a></li>
+        <li><a href="./div/game-account.html">Accounts</a></li>
+        <li><a href="https://twitter.com/aprel" target="_blank">Twitter</a></li>
+        <li><a href="https://www.linkedin.com/in/aprel/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://instagram.com/aprel" target="_blank">Instagram</a></li>
+        <li><a href="https://facebook.com/aprel" target="_blank">Facebook</a></li>
+        <li><a href="https://github.com/aprel" target="_blank">GitHub</a></li>
+      </ul>
+    </nav>
+    <img src="aprel.png" alt="Aprel's Profile Picture" class="profile-picture">
+  </header>
+  <main>
+    <section id="about" class="profile-section">
+        <h2><span class="text-background">About Aprel</span></h2>
+        <p><span class="text-background">Bio: A visionary technologist, passionate about harnessing the power of code to craft innovative solutions that inspire and empower. When I'm not pushing the boundaries of what's possible, you can find me indulging in literary masterpieces, sipping artisanal coffee, or planning my next odyssey to uncharted territories.</span></p>
+        <p><span class="text-background">Location: Palestine</span></p>
+        <p><span class="text-background">Contact: <a href="mailto:aprelsg22@gmail.com">aprelsg22@gmail.com</a></span></p>
+        <h3><span class="text-background">Info:</span></h3>
+        <div class="info-item">
+          <span><span class="text-background">Name:</span></span>
+          <p><span class="text-background">Hala</span></p>
+        </div>
+        <div class="info-item">
+          <span><span class="text-background">Age:</span></span>
+          <p><span class="text-background">25</span></p>
+        </div>
+        <div class="info-item">
+          <span><span class="text-background">Country:</span></span>
+          <p><span class="text-background">Palestine</span></p>
+        </div>
+        <div class="info-item">
+          <span><span class="text-background">Sunshine Date:</span></span>
+          <p><span class="text-background">October 16, 1998</span></p>
+        </div>
+        <h3><span class="text-background">Skills:</span></h3>
+        <ul>
+          <!-- skills list items here -->
+        </ul>
+        <div class="skills-visualization">
+          <canvas id="skills-chart"></canvas>
+        </div>
+      </section>
+    <section id="posts" class="profile-section">
+      <h2>Recent Posts</h2>
+      <ul>
+        <li>Post 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Post 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li>Post 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+      </ul>
+    </section>
+    <section id="friends" class="profile-section">
+      <h2>Friends</h2>
+      <ul>
+        <li>
+          <a href="https://twitter.com/friend1" target="_blank">Friend 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/friend2" target="_blank">Friend 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</a>
+        </li>
+        <li>
+          <a href="https://twitter.com/friend3" target="_blank">Friend 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</a>
+        </li>
+      </ul>
+    </section>
+    <section id="experience" class="profile-section">
+      <h2>Experience</h2>
+      <ul>
+        <li>
+          <h3>Software Engineer at ABC Company (2020-2022)</h3>
+          <p>Responsibilities: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p>Skills used: HTML/CSS, JavaScript, React</p>
+        </li>
+        <li>
+          <h3>Intern at DEF Company (Summer 2019)</h3>
+          <p>Responsibilities: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Skills used: HTML/CSS, JavaScript</p>
+        </li>
+      </ul>
+    </section>
+    <section id="game-profile" class="profile-section">
+      <h2>Game Profile</h2>
+      <ul>
+        <li>
+          <span>Game:</span>
+          <span id="game-name">San Andreas Multiplayer</span>
+        </li>
+        <li>
+            <span>Server:</span>
+            <span id="server-name">UIF United Island Freeroam</span>
+          </li>
+          <li>
+            <span>Group:</span>
+            <span id="group-name">Seamless Gate</span>
+            <span id="group-rank">Top 3</span>
+          </li>
+          <li>
+            <span>Rank:</span>
+            <span id="rank">Leader (Exarch)</span>
+            <span id="role">Also known as SG QUEEN</span>
+          </li>
+          <li>
+            <span>Server Role:</span>
+            <span id="server-role">Administrator (Level 3)</span>
+          </li>
+          <li>
+            <span>Playtime:</span>
+            <span id="playtime">1000 hours</span>
+          </li>
+          <li>
+            <span>Wins:</span>
+            <span id="wins">500</span>
+          </li>
+          <li>
+            <span>Losses:</span>
+            <span id="losses">200</span>
+          </li>
+        </ul>
+        <div class="game-statistics">
+          <canvas id="game-statistics-chart"></canvas>
+        </div>
+      </section>
+      <section id="achievements" class="profile-section">
+        <h2>Achievements</h2>
+        <ul>
+          <li>Awarded "Best Developer" at ABC Company (2020)</li>
+          <li>Published in "JavaScript Weekly" magazine (2020)</li>
+          <li>Completed "React Mastery" course with honors (2019)</li>
+        </ul>
+      </section>
+      <section id="education" class="profile-section">
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <h3>Bachelor of Science in Computer Science, XYZ University (2018-2022)</h3>
+            <p>Relevant coursework: Data Structures, Algorithms, Computer Systems, Web Development</p>
+          </li>
+        </ul>
+      </section>
+      <section id="hobbies" class="profile-section">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>Photography: <a href="https://instagram.com/aprelphotography" target="_blank">Instagram</a></li>
+          <li>Music: <a href="https://soundcloud.com/aprelmusic" target="_blank">SoundCloud</a></li>
+          <li>Writing: <a href="https://medium.com/@aprel" target="_blank">Medium</a></li>
+        </ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+  </html>
